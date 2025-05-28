@@ -31,6 +31,9 @@ font-size: 2.5rem;
  gap: 2rem;
  padding-bottom: 3rem;
  padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  
 }
 .inputcontainer{
   margin-top: .4rem;
@@ -68,11 +71,19 @@ font-size: 1.3rem;
 }
 #resultDiv{
 width: 80vw;
-display: flexbox;
-
-flex-wrap: wrap;
+display: flex;
 justify-content: center;
 align-items: center;
+flex-wrap: wrap;
+overflow: hidden;
 
-padding: 1rem 5rem;
+}
+#resultDiv ol{
+  font-size: 1rem;
+  font-weight: 600;
+  
+  padding-top: 1rem;
+}
+.loader{
+
 }

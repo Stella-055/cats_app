@@ -16,21 +16,21 @@ function fetchPhotos() {
     })
     .catch(error => {
       console.error("Error fetching photos:", error);
-      resultDiv.innerHTML = "<p>Error fetching photos. Please try again later.</p>";
+      resultDiv.innerHTML = `<p style="padding-top:2rem;">Error fetching photos. Please try again later.</p>`;
     });
 }
 
 function fetchFacts() {
-  let number = 5
-  axios.get(`https://meowfacts.herokuapp.com/?limit=${number}`)
+  let number = numberOfFacts.value;
+  axios.get(`https://meowfacts.herokuapp.com/?count=${number}`)
   
     .then(response => {
       console.log("Facts fetched successfully:", response.data);
-      //resultDiv.innerHTML = response.data.data.map(fact => `<p>${fact.fact}</p>`).join('');
+      resultDiv.innerHTML = "<ol> "+ response.data.data.map(fact => "<li>" + fact +" </li> " )+ " </ol>";
     })
     .catch(error => {
       console.error("Error fetching facts:", error);
-      //resultDiv.innerHTML = "<p>Error fetching facts. Please try again later.</p>";
+      resultDiv.innerHTML = "<p>Error fetching facts. Please try again later.</p>";
     });
 }
 
