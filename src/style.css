@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 body {
   font-family: 'Inter', sans-serif;
@@ -11,6 +12,9 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 .inputsection {
   display: flex;
@@ -18,7 +22,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: antiquewhite;
- width: 100%;
+ width: 100vw;
+
 }
 .inputsection h1 {
 padding-top: 2.5rem;
@@ -84,6 +89,22 @@ overflow: hidden;
   
   padding-top: 1rem;
 }
-.loader{
 
-}
+  .loader{
+    display: none;
+    height: 15rem;
+    width: 15rem;
+    border-inline: 14px solid rgb(250, 208, 192);
+    border-block: 14px solid rgb(213, 153, 194);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
