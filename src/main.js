@@ -1,9 +1,9 @@
 import axios from "axios";
-let numberOfFacts= document.getElementById("numberOfFacts")
-let numberOfPhotos= document.getElementById("numberOfPhotos")
-let factsButton = document.getElementById("factsbutton")
-let photosButton = document.getElementById("photosbutton")
-let resultDiv = document.getElementById("resultDiv")
+let numberOfFacts = document.getElementById("numberOfFacts");
+let numberOfPhotos = document.getElementById("numberOfPhotos");
+let factsButton = document.getElementById("factsbutton");
+let photosButton = document.getElementById("photosbutton");
+let resultDiv = document.getElementById("resultDiv");
 let loader = document.querySelector(".loader");
 
 factsButton.addEventListener("click", fetchFacts);
@@ -11,13 +11,19 @@ photosButton.addEventListener("click", fetchPhotos);
 function fetchPhotos() {
   let number = numberOfPhotos.value;
   loader.style.display = "block";
-  axios.get(`https://api.thecatapi.com/v1/images/search?limit=${number}`)
-      
-    .then(response => {
+  axios
+    .get(`https://api.thecatapi.com/v1/images/search?limit=${number}`)
+
+    .then((response) => {
       console.log("Photos fetched successfully:", response.data);
-      resultDiv.innerHTML = response.data.map(photo => `<img src="${photo.url}" alt="Cat Photo" style="width:300px; height:400px;padding:.7rem">`).join('');
+      resultDiv.innerHTML = response.data
+        .map(
+          (photo) =>
+            `<img src="${photo.url}" alt="Cat Photo" style="width:300px; height:400px;padding:.7rem">`
+        )
+        .join("");
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error fetching photos:", error);
       resultDiv.innerHTML = `<p style="padding-top:2rem;">Error fetching photos. Please try again later.</p>`;
     });
@@ -26,15 +32,19 @@ function fetchPhotos() {
 function fetchFacts() {
   let number = numberOfFacts.value;
   loader.style.display = "block";
-  axios.get(`https://meowfacts.herokuapp.com/?count=${number}`)
-  
-    .then(response => {
-     // console.log("Facts fetched successfully:", response.data);
-      resultDiv.innerHTML = "<ol> "+ response.data.data.map(fact =>`<li>${fact}</li>`).join("")+ "</ol>";
+  axios
+    .get(`https://meowfacts.herokuapp.com/?count=${number}`)
+
+    .then((response) => {
+      // console.log("Facts fetched successfully:", response.data);
+      resultDiv.innerHTML =
+        "<ol> " +
+        response.data.data.map((fact) => `<li>${fact}</li>`).join("") +
+        "</ol>";
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error fetching facts:", error);
-      resultDiv.innerHTML = "<p>Error fetching facts. Please try again later.</p>";
+      resultDiv.innerHTML =
+        "<p>Error fetching facts. Please try again later.</p>";
     });
 }
-

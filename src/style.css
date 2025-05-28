@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -22,37 +21,33 @@ body {
   align-items: center;
   justify-content: center;
   background-color: antiquewhite;
- width: 100vw;
-
+  width: 100vw;
 }
 .inputsection h1 {
-padding-top: 2.5rem;
-font-size: 2.5rem;
-
+  padding-top: 2.5rem;
+  font-size: 2.5rem;
 }
-.inputsdiv{
+.inputsdiv {
   display: flex;
- flex-wrap: wrap;
- gap: 2rem;
- padding-bottom: 3rem;
- padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
   justify-content: center;
   align-items: center;
-  
 }
-.inputcontainer{
-  margin-top: .4rem;
+.inputcontainer {
+  margin-top: 0.4rem;
   display: flex;
   justify-content: center;
   align-self: center;
-  gap: .1rem;
+  gap: 0.1rem;
 }
 .inputsDivs label {
-font-weight: 700;
-font-size: 1.3rem;
-
+  font-weight: 700;
+  font-size: 1.3rem;
 }
-.inputsDivs input{
+.inputsDivs input {
   padding: 1rem;
   border-radius: 5px;
   width: 22rem;
@@ -63,48 +58,46 @@ font-size: 1.3rem;
   text-align: center;
 }
 ::placeholder {
-  color:plum;
-  
+  color: plum;
 }
-.inputsDivs button{
-  padding: .7rem;
+.inputsDivs button {
+  padding: 0.7rem;
   border-radius: 5px;
   border: none;
   background-color: plum;
   color: white;
   font-size: 1.2rem;
 }
-#resultDiv{
-width: 80vw;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-overflow: hidden;
-
+#resultDiv {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
-#resultDiv ol{
+#resultDiv ol {
   font-size: 1rem;
   font-weight: 600;
-  
+
   padding-top: 1rem;
 }
 
-  .loader{
-    display: none;
-    height: 15rem;
-    width: 15rem;
-    border-inline: 14px solid rgb(250, 208, 192);
-    border-block: 14px solid rgb(213, 153, 194);
-    border-radius: 50%;
-    animation: rotate 1s linear infinite;
+.loader {
+  display: none;
+  height: 15rem;
+  width: 15rem;
+  border-inline: 14px solid rgb(250, 208, 192);
+  border-block: 14px solid rgb(213, 153, 194);
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
   }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
+
+  to {
+    transform: rotate(360deg);
   }
+}
