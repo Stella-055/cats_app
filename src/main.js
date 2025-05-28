@@ -19,7 +19,7 @@ function fetchPhotos() {
       resultDiv.innerHTML = response.data
         .map(
           (photo) =>
-            `<img src="${photo.url}" alt="Cat Photo" style="width:300px; height:400px;padding:.7rem">`
+            `<img src="${photo.url}" alt="Cat Photo" style="width:300px; height:400px;padding:.7rem;">`
         )
         .join("");
     })

@@ -6,7 +6,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  background-color: white;
+  background-color: rgb(247, 239, 230);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: rgb(250, 208, 192);
   width: 100vw;
 }
 .inputsection h1 {
@@ -30,7 +30,7 @@ body {
 .inputsdiv {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   padding-bottom: 3rem;
   padding-top: 2rem;
   justify-content: center;
@@ -74,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  overflow: hidden;
+ 
 }
 #resultDiv ol {
   font-size: 1rem;
@@ -84,7 +84,8 @@ body {
 }
 
 .loader {
-  display: none;
+ display: none;
+ margin-top: 1rem;
   height: 15rem;
   width: 15rem;
   border-inline: 14px solid rgb(250, 208, 192);
