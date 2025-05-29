@@ -79,10 +79,14 @@ body {
  
 }
 #resultDiv ol {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 300;
 
   padding-top: 1rem;
+}
+#resultDiv ol li {
+  padding: 0.5rem;
+ 
 }
 
 .loader {
